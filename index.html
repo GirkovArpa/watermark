@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<script src="index.js"></script>
+
+<body>
+</body>
+<script>
+  (async () => {
+    const base64 = `data:image/png;base64,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`;
+    const watermark = await createWatermark(base64, 'John Doe');
+    
+    const image = new Image();
+    image.src = watermark;
+    document.body.appendChild(image); // displays watermarked image on screen
+
+    const hiddenText = await readWatermark(watermark, 8);
+    console.log(hiddenText); // John Doe
+  })();
+</script>
+
+</html>
