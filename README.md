@@ -1,4 +1,6 @@
-Does not work for images with transparency.  I don't know why.
+This is a client-side implementation of LSB (least significant bit) steganography.
+
+It does not work for images with transparency.  I don't know why.
 
 ```html
 <!DOCTYPE html>
